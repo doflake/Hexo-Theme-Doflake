@@ -2,17 +2,19 @@
 <html>
   <%- partial('_partial/head') %>
   <body>
-
+    <style>
+      body {
+        background-image: url(https://cdn.jsdelivr.net/gh/doflake/Picture/Background/2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+    </style>
     <div class="container">
       <%- partial('_partial/header') %>
       <main class="main">
         <%- body %>
       </main>
     </div>
-    <% if(theme.sidebar.enable) { %> 
-      <div class="sidebar">
-        <%- include('sidebar.ejs') %> 
-      </div>
-    <% } %> 
-  </body>
+
 </html>

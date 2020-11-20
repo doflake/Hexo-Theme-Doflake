@@ -30,7 +30,6 @@ sidebar:
 ## Study:
 ## https://www.jianshu.com/p/7ab21c7f0674  (解决冲突)
 ## https://spacefan.github.io/2018/06/27/hexo-MathJax/  (mathjax.ejs以及调用)
-mathjax:
-  enable: true
+
 
     
