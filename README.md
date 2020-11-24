@@ -1,15 +1,4 @@
----
-title: '[Do] 主题 (doflake) 文档'
-date: 2020-11-09 20:23:09
-link_c: Do
-link_name: Doflake-Theme-Document
-top: 9
-mathjax: true
----
-
 介绍 **主题简介 | 主题食用 | 更新日志**
-
-<!--more-->
 
 ## 主题简介
 
