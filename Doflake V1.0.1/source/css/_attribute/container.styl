@@ -1,0 +1,12 @@
+$max_width = convert(hexo-config("attribute.index_post.max_width"))
+$margin_left = convert(hexo-config("attribute.index_post.left"))
+$margin_right = convert(hexo-config("attribute.index_post.right"))
+$margin_top = convert(hexo-config("attribute.index_post.top"))
+$margin_bottom = convert(hexo-config("attribute.index_post.bottom"))
+.container {
+  max-width: $max_width;
+  margin-left: $margin_left;
+  margin-right: $margin_right;
+  margin-top: $margin_top;
+  margin-bottom: $margin_bottom;
+}

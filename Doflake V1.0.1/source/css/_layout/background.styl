@@ -1,0 +1,8 @@
+$background_repeat = convert(hexo-config("layout.background.repeat"))
+$background_attachment = convert(hexo-config("layout.background.attachment"))
+$background_size = convert(hexo-config("layout.background.size"))
+body {
+  background-repeat: $background_repeat;
+  background-attachment: $background_attachment;
+  background-size: $background_size;
+}
