@@ -1,0 +1,38 @@
+$clock_size = convert(hexo-config("meta.clock.layout.size"))
+$clock_fill = convert(hexo-config("meta.clock.layout.fill"))
+$clock_stroke_width = convert(hexo-config("meta.clock.layout.stroke_width"))
+$clock_animation_duration = hexo-config("meta.clock.layout.time")
+.clock_words{
+    font-size: $clock_size;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    fill: $clock_fill;
+
+    stroke-width: $clock_stroke_width;
+    stroke-dasharray: 35,125;
+
+    animation-name: drawing;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.clock_words-1{
+    stroke: rgb(185, 187, 255);
+    animation-delay: -0s;
+}
+.clock_words-2{
+    stroke: rgb(235, 145, 235);
+    animation-delay: -($clock_animation_duration/2) s;
+}
+@keyframes drawing {
+    100%{
+        stroke-dashoffset: -160
+    }
+}
+
+.theme-meta-clock {
+    position: fixed;
+    top: 10px;
+    right: 5px;
+}
