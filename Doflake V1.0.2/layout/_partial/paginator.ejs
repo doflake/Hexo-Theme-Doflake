@@ -1,8 +1,26 @@
-<% if (page.total > 1){ %>
-  <nav class="page-nav">
-    <%- paginator({
-      prev_text: "&laquo;" + __('Paginator.Prev'),
-      next_text: __('Paginator.Next') + "&raquo;"
-    }) %>
-  </nav>
+<% if (page.total > 1) { %>
+  <div class="paginator">
+
+
+    <a class="paginator-prev" rel="prev" href="<%= url_for(page.prev_link) %>">
+      <section class="paginator-prev-section">
+        <% if (page.prev == 0) { %>
+          <span class="paginator-prev-fa-no"></span>
+        <% } else { %>  
+          <span class="paginator-prev-fa fa fa-chevron-left"></span>
+        <% } %> 
+      </section>
+    </a>
+
+    <a class="paginator-next" rel="next" href="<%= url_for(page.next_link) %>">
+      <section class="paginator-next-section">
+        <% if (page.next == 0) { %>
+          <span class="paginator-next-fa-no"></span>
+        <% } else { %>  
+          <span class="paginator-next-fa fa fa-chevron-right"></span>
+        <% } %> 
+      </section>
+    </a>
+
+  </div>
 <% } %>

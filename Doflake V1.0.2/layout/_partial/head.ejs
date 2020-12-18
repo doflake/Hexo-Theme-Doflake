@@ -4,34 +4,38 @@
   
   <link rel="icon" href="<%- theme.basic.info.favicon %>"> <!-- theme-basic-favicon -->
 
-  <div class="theme-basic">
+  <div class="doflake">
+    <div class="theme-basic">
 
-    <div class="theme-basic-title">
-      <title><%= theme.basic.info.title %></title>
-    </div>   
-
-    <div class="theme-basic-mathjax">
-       <% if (theme.basic.mathjax.enable){ %>
-         <%- partial('_basic/mathjax') %>
-       <% } %>
-    </div> 
-  </div>
-
+      <div class="theme-basic-title">
+        <title><%= theme.basic.info.title %></title>
+      </div>   
   
-  <div class="theme-meta">
-
-    <div class="theme-meta-totop">
-      <% if (theme.meta.totop.enable) { %>
-        <%- partial('_meta/totop') %>
-      <% } %>  
+      <div class="theme-basic-mathjax">
+         <% if (theme.basic.mathjax.enable){ %>
+           <%- partial('_basic/mathjax') %>
+         <% } %>
+      </div> 
     </div>
-
-    <div class="theme-meta-clock">
-      <% if (theme.meta.clock.enable) { %> 
-        <%- partial('_meta/clock') %> 
-      <% } %> 
-    </div>
+  
     
+    <div class="theme-meta">
+  
+      <div class="theme-meta-totop">
+        <% if (theme.meta.totop.enable) { %>
+          <%- partial('_meta/totop') %>
+        <% } %>  
+      </div>
+  
+      <div class="theme-meta-clock">
+        <% if (theme.meta.clock.enable) { %> 
+          <%- partial('_meta/clock') %> 
+        <% } %> 
+      </div>
+      
+    </div>
+    <div class="theme-css">
+      <%- css('css/style.css') %>
+    </div>
   </div>
-  <%- css('css/style.css') %>
 </head>
