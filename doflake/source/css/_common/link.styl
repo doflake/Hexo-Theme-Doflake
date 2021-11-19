@@ -1,0 +1,25 @@
+:root {
+   --color-link-before: convert(hexo-config("color.link.before"));
+   --color-link-hover: convert(hexo-config("color.link.hover"));
+}
+
+.link {
+    position: relative;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link:before {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: -5px;
+    display: block;
+    height: 2px;
+    content: '';
+}
+.link:hover:before {
+    right: 0;
+    left: 0;  
+}

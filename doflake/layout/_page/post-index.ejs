@@ -1,0 +1,54 @@
+<div class="post-index-container">
+  <section class="posts">
+    <% page.posts.each(function (post) { %>
+
+    <div class="post-index-card card">
+      <% if ( post.headimg ) { %>
+      <div class="mdui-ripple mdui-shadow-3 post-index-headimg">
+        <img src="<%= post.headimg %>" onclick="location.href='<%- url_for(post.path) %>';"></img>
+      </div>
+      <% } else if ( post.avatar || post.author || post.signature ){ %>
+      <div class="placeholder-1"></div>
+      <% } else { %> <div class="placeholder-2"></div> <% } %>
+      <% if ( post.avatar ) { %>
+      <div class="post-index-author-wrapper">
+        <% if ( post.link )  { %>
+        <img class="mdui-shadow-4 avatar-round" src="<%= post.avatar %>"
+          onclick="location.href='<%= post.link %>';"></img>
+        <% } else { %>
+        <img class="mdui-shadow-4 avatar-round" src="<%= post.avatar %>">
+        <% } %>
+        <div class="post-index-author-info">
+          <a class="name"><%= post.author %></a>
+          <a class="signature"><%= post.signature %></a>
+        </div>
+        <div class="post-index-tag">
+          <% post.tags.each(function (tag) { %>
+          <a class="post-index-tag-a link" href="<%= tag.path %>" target="_blank">
+            <i class="fa fa-tag"></i>
+            <%= tag.name %> (<%= tag.length %>)
+          </a>
+          &#8195;
+          <% }) %>
+        </div>
+      </div>
+      <hr class="fa fa-scissors">
+      </hr>
+      <% } %>
+      <div class="post-index-content">
+        <a class="cut">|</a>
+        <a target="title" class="link" href="<%= post.path %>" ><%= post.title %></a>
+        <div class="text">
+          <%- post.excerpt || post.content %>
+        </div>
+      </div>
+      <button class="mdui-btn mdui-ripple mdui-hoverable post-index-readmore" onclick="location.href='<%- url_for(post.path) %>';" target="readmore">
+        <i class="button">
+          &#8195;&#8195;Read More
+          <i class="mdui-icon material-icons">&#xe315;</i>
+        </i>
+      </button>
+    </div>
+    <% }) %>
+  </section>
+</div>

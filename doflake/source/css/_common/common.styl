@@ -1,0 +1,95 @@
+:root {
+    --color-primary: convert(hexo-config('color.primary'));
+    --color-accent: convert(hexo-config('color.accent'));
+}
+
+@font-face {
+    font-family: Fira Sans, "Noto Serif SC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;;
+    src: url();
+}
+
+h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
+    content: '\f863';
+    -webkit-animation: avatar_turn_around 1s linear infinite;
+    -moz-animation: avatar_turn_around 1s linear infinite;
+    -o-animation: avatar_turn_around 1s linear infinite;
+    -ms-animation: avatar_turn_around 1s linear infinite;
+    animation: avatar_turn_around 1s linear infinite;
+}
+
+hr {
+  position: relative;
+  margin: 1rem auto;
+  border: 2px dashed var(--color-hr);
+  width: calc(100% - 4px);
+
+  display: inline-block;
+  font: normal normal normal 20px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+hr:hover:before {
+  left: calc(95% - 20px);
+}
+
+hr:before {
+  position: absolute;
+  top: -10px;
+  left: 5%;
+  z-index: 1;
+  color: var(--color-hr);
+  content: "\f0c4";
+  font-size: 20px;
+  line-height: 1;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+a[target=_blank] {
+    color: var(--color-a-before);
+    text-decoration: none;
+    transition: all 0.28s ease;
+}
+
+a[target=_blank]:hover {
+    color: var(--color-a-hover);
+}
+
+// 卡片 (radius 20px ; shadow 2 -> 6)
+.card {
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
+    transition-duration: 0.2s;
+    border-radius: 20px;
+}
+
+.card:hover {
+    -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+// 旋转
+.avatar-round {
+    border-radius: 50%;
+    transition: 1.5s all;
+}
+
+.avatar-round:hover {
+    transform: rotate(360deg);
+}
+
+:root {
+    --color-name: convert(hexo-config('color.name'));
+}
+
+.name {
+    color: var(--color-name);
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,33 @@
+<div class="aside-container">
+  <div class="aside-item aside-author-container card">
+    <div class="aside-author-avatar-background card-radius">
+      <img src="<%= theme.aside.author.avatar %>" onclick="location.href='/about';">
+    </div> 
+    <img src="<%= theme.aside.author.avatar %>" class="aside-author-avatar avatar-round" onclick="location.href='/about';"> 
+    <a class="aside-author-title" href="/about" target="title"><%= theme.aside.author.title %></a>
+    <div class="aside-author-subtitle"><%= theme.aside.author.subtitle %></div>
+    <hr style="position: relative; top: -35px;">
+    <div class="aside-author-social">
+      <div class="aside-author-social-item">
+        <a href="/archives/">
+          <span class="aside-author-social-num"><%= site.posts.length %></span>
+          <span class="aside-author-social-name">日志</span>
+        </a>
+      </div>
+      <div class="aside-author-social-item">
+        <a href="/categories/">
+          <span class="aside-author-social-num"><%= site.categories.length %></span>
+          <span class="aside-author-social-name">分类</span>
+        </a>
+      </div>
+      <div class="aside-author-social-item">
+        <a href="/tags/">
+          <span class="aside-author-social-num"><%= site.tags.length %></span>
+          <span class="aside-author-social-name">标签</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
